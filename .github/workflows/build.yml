@@ -2,7 +2,7 @@ name: build-own
 on:
   push:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '20 20 * * *'
 env:
     IMAGE_NAME: own
     IMAGE_TAGS: latest ${{ github.sha }}
