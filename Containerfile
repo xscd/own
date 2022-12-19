@@ -2,5 +2,5 @@ FROM ghcr.io/cgwalters/fedora-silverblue:37
 
 RUN rpm-ostree override remove gnome-terminal gnome-terminal-nautilus firefox firefox-langpacks && \
     rpm-ostree install gnome-console && \
-    rpm-ostree cleanup -m && \
+    rpm-ostree install https://kojipkgs.fedoraproject.org//packages/mesa/22.3.1/1.fc37/x86_64/mesa-dri-drivers-22.3.1-1.fc37.x86_64.rpm https://kojipkgs.fedoraproject.org//packages/mesa/22.3.1/1.fc37/x86_64/mesa-filesystem-22.3.1-1.fc37.x86_64.rpm https://kojipkgs.fedoraproject.org//packages/mesa/22.3.1/1.fc37/x86_64/mesa-libEGL-22.3.1-1.fc37.x86_64.rpm https://kojipkgs.fedoraproject.org//packages/mesa/22.3.1/1.fc37/x86_64/mesa-libGL-22.3.1-1.fc37.x86_64.rpm https://kojipkgs.fedoraproject.org//packages/mesa/22.3.1/1.fc37/x86_64/mesa-libgbm-22.3.1-1.fc37.x86_64.rpm https://kojipkgs.fedoraproject.org//packages/mesa/22.3.1/1.fc37/x86_64/mesa-libglapi-22.3.1-1.fc37.x86_64.rpm https://kojipkgs.fedoraproject.org//packages/mesa/22.3.1/1.fc37/x86_64/mesa-libxatracker-22.3.1-1.fc37.x86_64.rpm https://kojipkgs.fedoraproject.org//packages/mesa/22.3.1/1.fc37/x86_64/mesa-va-drivers-22.3.1-1.fc37.x86_64.rpm https://kojipkgs.fedoraproject.org//packages/mesa/22.3.1/1.fc37/x86_64/mesa-vulkan-drivers-22.3.1-1.fc37.x86_64.rpm && \
     ostree container commit
