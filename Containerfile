@@ -1,5 +1,7 @@
 FROM ghcr.io/xscd/fedora-silverblue:37
 
+RUN rpm-ostree cliwrap install-to-root /
+
 ADD dracut_call.sh dracut_call.sh
 
 RUN rpm-ostree override remove gnome-terminal gnome-terminal-nautilus firefox firefox-langpacks && \
