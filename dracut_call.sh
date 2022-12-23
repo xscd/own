@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Temporary workaround for: https://github.com/coreos/rpm-ostree/issues/4190
 # This has been fixed on rpm-ostree 2022.18 and this script will be removed
 # once that version reaches the stable coreos stream.
