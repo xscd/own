@@ -1,4 +1,4 @@
-FROM ghcr.io/xscd/fedora-silverblue:37
+FROM ghcr.io/cgwalters/fedora-silverblue:37
 
 RUN rpm-ostree cliwrap install-to-root /
 
