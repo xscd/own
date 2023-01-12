@@ -8,4 +8,5 @@ RUN rpm-ostree override remove gnome-terminal gnome-terminal-nautilus firefox fi
     kver=$(ls /lib/modules) && \
     /usr/libexec/rpm-ostree/wrapped/dracut --tmpdir /tmp/ --no-hostonly --kver $kver --reproducible -v --add ostree -f /tmp/initramfs2.img && \
     mv /tmp/initramfs2.img /lib/modules/$kver/initramfs.img && \
+    setsebool -P -N container_manage_cgroup 1 && \
     ostree container commit
